@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="위에서 내려다본 여섯 자리 식탁">
+<rect width="400" height="500" fill="#e3ece4"/><circle cx="350" cy="60" r="110" fill="#d6e4d8"/><circle cx="40" cy="470" r="90" fill="#d6e4d8"/>
+<g fill="#b9cbe6"><rect x="58" y="146" width="28" height="48" rx="14"/><rect x="58" y="231" width="28" height="48" rx="14"/><rect x="58" y="316" width="28" height="48" rx="14"/></g>
+<g fill="#f3c3b9"><rect x="314" y="146" width="28" height="48" rx="14"/><rect x="314" y="231" width="28" height="48" rx="14"/><rect x="314" y="316" width="28" height="48" rx="14"/></g>
+<rect x="112" y="108" width="176" height="300" rx="88" fill="#cbd9cd"/><rect x="106" y="100" width="176" height="300" rx="88" fill="#fff"/>
+<g fill="#f7f4ee" stroke="#e4ded2" stroke-width="2"><circle cx="148" cy="170" r="24"/><circle cx="148" cy="255" r="24"/><circle cx="148" cy="340" r="24"/><circle cx="240" cy="170" r="24"/><circle cx="240" cy="255" r="24"/><circle cx="240" cy="340" r="24"/></g>
+<g fill="none" stroke="#ece6db" stroke-width="2"><circle cx="148" cy="170" r="13"/><circle cx="148" cy="255" r="13"/><circle cx="148" cy="340" r="13"/><circle cx="240" cy="170" r="13"/><circle cx="240" cy="255" r="13"/><circle cx="240" cy="340" r="13"/></g>
+<g stroke="#c8b79c" stroke-width="3" stroke-linecap="round"><path d="M176 156v28M182 156v28M268 156v28M274 156v28M176 241v28M182 241v28M268 241v28M274 241v28M176 326v28M182 326v28M268 326v28M274 326v28"/></g>
+<circle cx="194" cy="255" r="14" fill="#c9dccb"/>
+<g><circle cx="186" cy="246" r="7" fill="#f2a99c"/><circle cx="201" cy="245" r="6" fill="#f7d27a"/><circle cx="196" cy="262" r="7" fill="#f6c1b6"/><circle cx="184" cy="261" r="5" fill="#fff"/><circle cx="205" cy="258" r="5" fill="#fff"/></g>
+</svg>

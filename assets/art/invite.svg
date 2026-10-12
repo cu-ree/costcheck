@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="펼쳐진 안내장">
+<rect width="400" height="500" fill="#fdf0e6"/><circle cx="60" cy="80" r="100" fill="#f9e3d3"/>
+<ellipse cx="200" cy="430" rx="130" ry="14" fill="#f1dccb"/>
+<path d="M88 112l112 22v290l-112-22z" fill="#f3d9c6"/>
+<path d="M200 134l112-22v290l-112 22z" fill="#fff"/>
+<path d="M255 168c-16 0-27 12-27 26 0 19 27 42 27 42s27-23 27-42c0-14-11-26-27-26z" fill="#e2766c"/><circle cx="255" cy="193" r="9" fill="#fff"/>
+<g fill="#f1e7df"><rect x="222" y="262" width="66" height="8" rx="4"/><rect x="222" y="282" width="50" height="8" rx="4"/><rect x="222" y="302" width="60" height="8" rx="4"/><rect x="222" y="336" width="40" height="8" rx="4"/></g>
+<path d="M144 360c0-60 6-110 16-150" stroke="#9cbf96" stroke-width="3" fill="none"/>
+<g fill="#a9c9a4"><ellipse cx="152" cy="300" rx="7" ry="15" transform="rotate(-30 152 300)"/><ellipse cx="160" cy="260" rx="7" ry="15" transform="rotate(25 160 260)"/></g>
+<g><circle cx="160" cy="206" r="10" fill="#f3c3b9"/><circle cx="147" cy="232" r="8" fill="#f7d27a"/><circle cx="170" cy="228" r="7" fill="#fff"/></g>
+</svg>

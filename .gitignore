@@ -1,0 +1,16 @@
+# 비밀값 (NCP 키 등) — 절대 커밋하지 않음
+.env
+.env.local
+
+# 이전 프로토타입 보관 폴더 (배포·커밋 제외)
+_prototype/
+
+# 의존성·캐시
+node_modules/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini

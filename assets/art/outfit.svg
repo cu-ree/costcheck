@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="옷걸이에 걸린 재킷과 원피스">
+<rect width="400" height="500" fill="#f6e5d8"/><circle cx="330" cy="430" r="120" fill="#f1d9c7"/>
+<path d="M40 112h320" stroke="#c9a98f" stroke-width="5" stroke-linecap="round"/>
+<g fill="none" stroke="#b08d73" stroke-width="3" stroke-linecap="round"><path d="M140 112v18M260 112v18"/><path d="M92 168l48-30 48 30M214 166l46-28 46 28"/></g>
+<path d="M92 168q48-16 96 0l12 196h-120z" fill="#3e5480"/>
+<path d="M126 160l14 74 14-74z" fill="#f6efe6"/><path d="M122 162l18 86M158 162l-18 86" stroke="#2e4168" stroke-width="3"/>
+<g fill="#c9d3e8"><circle cx="140" cy="276" r="4"/><circle cx="140" cy="300" r="4"/></g>
+<path d="M228 166q32-12 64 0l-6 58q-26 8-52 0z" fill="#f1b7ab"/><path d="M234 224l-34 152q60 18 120 0l-34-152z" fill="#f4c4b9"/><rect x="232" y="220" width="56" height="10" rx="5" fill="#e9978a"/>
+</svg>

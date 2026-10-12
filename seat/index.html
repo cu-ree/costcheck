@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- [검색 등록] 소유확인 코드는 tools/build_site.py 의 NAVER_VERIFY, GOOGLE_VERIFY 에 넣고 다시 실행하세요.
+<meta name="naver-site-verification" content="네이버에서_받은_값">
+<meta name="google-site-verification" content="구글에서_받은_값">
+-->
+<title>상견례 자리 배치도 무료 만들기 | COSTCHECK</title>
+<meta name="description" content="양가 인원과 호칭만 넣으면 상견례 자리 배치도가 완성돼요. 상석과 출입문까지 표시되고, 이미지로 저장해 가족과 공유하세요.">
+<link rel="canonical" href="https://costcheck.kr/seat/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="COSTCHECK">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="상견례 자리 배치도 무료 만들기 | COSTCHECK">
+<meta property="og:description" content="양가 인원과 호칭만 넣으면 상견례 자리 배치도가 완성돼요. 상석과 출입문까지 표시되고, 이미지로 저장해 가족과 공유하세요.">
+<meta property="og:url" content="https://costcheck.kr/seat/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../assets/sgr.css">
+<!-- [광고] 애드센스 게시자 ID 는 tools/build_site.py 의 ADSENSE_CLIENT 에 넣으세요. -->
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="logo" href="../">COSTCHECK<span>상견례</span></a>
+    <nav class="gnb" aria-label="상견례 준비 메뉴">
+      <a href="../">둘러보기</a>
+      <a href="../seat/" aria-current="page">자리 배치도</a>
+      <a href="../place/">장소 찾기</a>
+      <a href="../gift/">선물 추천</a>
+      <a href="../ppt/">PPT</a>
+      <a href="../invite/">안내장</a>
+      <a href="../letter/">손편지</a>
+      <a href="../cost/">비용 계산</a>
+      <a href="../talk/">대화 카드</a>
+      <a href="../checklist/">체크리스트</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="view wrap">
+<a class="back" href="../">← 상견례 준비 전체 보기</a>
+<div class="sec-hd">
+  <div><p class="eyebrow">SEATING PLAN</p><h1>우리 가족 자리 배치도</h1><p>인원과 호칭을 넣으면 바로 그려져요. 신랑 측은 청색, 신부 측은 홍색으로 표시돼요.</p></div>
+  <span class="note-pill">입력한 이름은 이 브라우저 밖으로 나가지 않아요</span>
+</div>
+<div class="layout">
+  <div class="panel">
+    <div class="field"><label for="meetingName">모임 이름</label><input class="inp" id="meetingName" maxlength="30" value="두 집안의 첫 상견례"></div>
+    <div class="two">
+      <div class="field"><label for="groomCount">신랑 측</label><select class="inp" id="groomCount"></select></div>
+      <div class="field"><label for="brideCount">신부 측</label><select class="inp" id="brideCount"></select></div>
+    </div>
+    <div class="field"><span class="lab" id="shapeLab">테이블</span>
+      <div class="seg" role="group" aria-labelledby="shapeLab"><button type="button" data-shape="rect" aria-pressed="true">긴 테이블</button><button type="button" data-shape="round" aria-pressed="false">원형 테이블</button></div>
+    </div>
+    <div class="field"><label for="doorSide">출입문 위치</label>
+      <select class="inp" id="doorSide"><option value="right">오른쪽</option><option value="left">왼쪽</option><option value="bottom">아래쪽</option><option value="top">위쪽</option></select>
+    </div>
+    <div class="field"><span class="lab">자리별 호칭</span><div class="names" id="nameFields"></div></div>
+    <div class="actions">
+      <button type="button" class="btn btn-sm" id="downloadPng">이미지 저장</button>
+      <button type="button" class="btn btn-sm btn-line" id="printSeat">인쇄 · PDF</button>
+      <button type="button" class="btn-ghost" id="downloadSvg">SVG</button>
+      <button type="button" class="btn-ghost" id="resetSeat">처음대로</button>
+    </div>
+  </div>
+  <div class="sticky">
+    <div class="paper" id="seatCanvas" aria-live="polite"></div>
+    <div class="paper-meta"><span id="seatCount">6명, 긴 테이블</span><span class="legend"><span class="g">신랑 측</span><span class="b">신부 측</span></span></div>
+  </div>
+</div>
+
+<section class="block" aria-labelledby="seatRules">
+  <div class="block-hd">
+    <h2 id="seatRules">상견례 자리, 이렇게 앉으면 무난해요</h2>
+    <p>집안마다 정한 방식이 있다면 그걸 따르면 돼요. 따로 정한 게 없을 때 많이 쓰는 기준이에요.</p>
+  </div>
+  <div class="notes">
+    <div class="note"><h3>상석은 출입문에서 먼 안쪽</h3><p>문에서 가장 먼 자리, 창이나 벽을 등진 자리가 윗자리예요. 양가 아버지가 안쪽, 그다음 어머니 순서로 앉으세요. 배치도에서 출입문 위치를 고르면 상석 쪽이 표시돼요.</p></div>
+    <div class="note"><h3>양가는 마주 보고 앉기</h3><p>한쪽 줄에 신랑 측, 맞은편에 신부 측이 앉아요. 아버지끼리, 어머니끼리, 예비부부끼리 마주 보면 같은 또래끼리 이야기가 이어지기 쉬워요.</p></div>
+    <div class="note"><h3>예비부부는 문 쪽 끝자리</h3><p>주문, 반찬 추가, 계산을 챙기려면 드나들기 쉬운 문 쪽이 편해요. 형제자매가 함께 오면 예비부부 옆 바깥쪽에 앉아요.</p></div>
+  </div>
+  <div class="notes" style="margin-top:16px">
+    <div class="note"><h3>원형 테이블일 때</h3><p>문 정면 안쪽 두 자리에 양가 아버지가 나란히 앉고, 양옆으로 각 집안이 이어 앉아요. 예비부부가 문 쪽에서 서로 이웃하게 되면 대화를 연결하기 좋아요.</p></div>
+    <div class="note"><h3>인원이 서로 다를 때</h3><p>한쪽이 두 명, 다른 쪽이 네 명이어도 괜찮아요. 빈자리를 억지로 맞추지 말고, 적은 쪽 부모님이 테이블 가운데에 오도록 앉으면 덜 허전해 보여요.</p></div>
+    <div class="note"><h3>보내기 전에 확인할 것</h3><ul><li>호칭이 집안에서 쓰는 말과 같은지</li><li>거동이 불편한 분은 문과 가까운 자리인지</li><li>좌식 룸이면 오래 앉기 힘든 분이 없는지</li></ul></div>
+  </div>
+</section>
+<aside class="related" aria-label="같이 보면 좋은 글"><h2>같이 보면 좋은 가이드</h2><ul><li><a href="../guide/manners/">상견례 예절과 피해야 할 말 <span>호칭, 식사 예절, 피해야 할 말</span></a></li><li><a href="../guide/order/">상견례 순서와 진행 <span>도착부터 배웅까지 시간표와 진행 멘트</span></a></li></ul></aside>
+</div>
+<div class="wrap more-tools">
+  <h3>다른 준비 도구</h3>
+  <div class="chips"><a class="chip" href="../seat/" aria-current="page">자리 배치도</a><a class="chip" href="../place/">장소 찾기</a><a class="chip" href="../gift/">선물 추천</a><a class="chip" href="../ppt/">가족 소개 PPT</a><a class="chip" href="../invite/">안내장</a><a class="chip" href="../letter/">손편지</a><a class="chip" href="../cost/">비용 계산기</a><a class="chip" href="../talk/">대화 카드</a><a class="chip" href="../checklist/">D-day 체크리스트</a></div>
+</div>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div class="ft-about"><b>COSTCHECK</b><p>상견례 준비 노트는 일반적인 관례를 정리한 안내예요. 지역과 집안에 따라 다를 수 있으니 양가의 뜻을 먼저 살펴 주세요. 도구에 입력한 내용과 사진은 서버로 보내지 않아요.</p></div>
+      <nav aria-label="준비 도구"><h2>준비 도구</h2><a href="../seat/">자리 배치도</a><a href="../place/">장소 찾기</a><a href="../gift/">선물 추천</a><a href="../ppt/">가족 소개 PPT</a><a href="../invite/">안내장</a><a href="../letter/">손편지</a><a href="../cost/">비용 계산기</a><a href="../talk/">대화 카드</a><a href="../checklist/">D-day 체크리스트</a></nav>
+      <nav aria-label="상견례 가이드"><h2>가이드</h2><a href="../guide/order/">상견례 순서와 진행</a><a href="../guide/outfit/">상견례 복장</a><a href="../guide/manners/">상견례 예절과 피해야 할 말</a><a href="../guide/thanks/">상견례 후 감사 인사</a><a href="../guide/who-pays/">상견례 비용은 누가 내나</a></nav>
+      <nav aria-label="사이트 정보"><h2>사이트</h2><a href="../">첫 화면</a><a href="../about/">사이트 소개</a><a href="../privacy/">개인정보처리방침</a><a href="../contact/">문의하기</a></nav>
+    </div>
+    <p class="ft-copy">© 2026 COSTCHECK · costcheck.kr</p>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="빠른 이동">
+  <a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>둘러보기</a>
+  <a href="../seat/" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="4"/><circle cx="4" cy="8" r="1.5"/><circle cx="4" cy="16" r="1.5"/><circle cx="20" cy="8" r="1.5"/><circle cx="20" cy="16" r="1.5"/></svg>배치도</a>
+  <a href="../place/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>장소</a>
+  <a href="../gift/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9zm0 0c2-4 6-4 6-1.5S14 9 12 9z"/></svg>선물</a>
+  <a href="../checklist/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"/></svg>체크</a>
+</nav>
+
+<button class="to-top" id="toTop" aria-label="맨 위로"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d1d22" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="printArea"></div>
+
+<script src="../assets/sgr.js"></script>
+<script src="../assets/seat.js"></script>
+</body>
+</html>

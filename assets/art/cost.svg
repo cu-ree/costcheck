@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="영수증과 동전">
+<rect width="400" height="500" fill="#f7eed3"/><circle cx="60" cy="80" r="100" fill="#f3e5bd"/>
+<path d="M112 84h176v316l-14.7 13-14.6-13-14.7 13-14.7-13-14.6 13-14.7-13-14.7 13-14.6-13-14.7 13-14.7-13-14.6 13-14.7-13z" fill="#e9dcb4" transform="translate(6 6)"/>
+<path d="M112 84h176v316l-14.7 13-14.6-13-14.7 13-14.7-13-14.6 13-14.7-13-14.7 13-14.6-13-14.7 13-14.7-13-14.6 13-14.7-13z" fill="#fff"/>
+<rect x="140" y="116" width="72" height="10" rx="5" fill="#1d1d22"/>
+<g fill="#ecebe6"><rect x="140" y="150" width="120" height="8" rx="4"/><rect x="140" y="176" width="96" height="8" rx="4"/><rect x="140" y="202" width="110" height="8" rx="4"/><rect x="140" y="228" width="84" height="8" rx="4"/></g>
+<g fill="#f0c9a0"><rect x="236" y="176" width="24" height="8" rx="4"/><rect x="236" y="228" width="24" height="8" rx="4"/></g>
+<path d="M140 266h120" stroke="#1d1d22" stroke-width="2" stroke-dasharray="4 5"/>
+<rect x="140" y="290" width="54" height="12" rx="6" fill="#ecebe6"/><rect x="206" y="286" width="54" height="18" rx="6" fill="#e2766c"/>
+<ellipse cx="300" cy="404" rx="44" ry="14" fill="#e3b75a"/><rect x="256" y="378" width="88" height="26" fill="#e3b75a"/><ellipse cx="300" cy="378" rx="44" ry="14" fill="#f2cd73"/>
+<ellipse cx="312" cy="360" rx="44" ry="14" fill="#e3b75a"/><rect x="268" y="340" width="88" height="20" fill="#e3b75a"/><ellipse cx="312" cy="340" rx="44" ry="14" fill="#f6d784"/>
+<text x="312" y="346" text-anchor="middle" font-size="18" font-weight="700" fill="#c7962f" font-family="sans-serif">₩</text>
+</svg>

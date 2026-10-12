@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="두 개의 말풍선과 찻잔">
+<rect width="400" height="500" fill="#f5e1dc"/><circle cx="360" cy="440" r="120" fill="#f0d3cc"/>
+<rect x="62" y="96" width="214" height="124" rx="46" fill="#fff"/><path d="M110 212l-20 40 54-30z" fill="#fff"/>
+<g fill="#e7a59a"><circle cx="134" cy="158" r="10"/><circle cx="169" cy="158" r="10"/><circle cx="204" cy="158" r="10"/></g>
+<rect x="140" y="246" width="200" height="112" rx="44" fill="#e9877a"/><path d="M290 350l26 38-56-22z" fill="#e9877a"/>
+<g fill="#fff" opacity=".9"><rect x="176" y="282" width="120" height="10" rx="5"/><rect x="176" y="306" width="84" height="10" rx="5"/></g>
+<ellipse cx="120" cy="430" rx="62" ry="12" fill="#ead0c9"/><path d="M78 386h84l-8 40h-68z" fill="#fff"/><path d="M162 396c18 0 18 22 0 22" fill="none" stroke="#fff" stroke-width="6"/>
+<path d="M106 370c-8-10 8-14 0-26M124 370c-8-10 8-14 0-26" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>

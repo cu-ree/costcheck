@@ -1,0 +1,31 @@
+<a class="back" href="{{R}}">← 상견례 준비 전체 보기</a>
+<div class="sec-hd">
+  <div><p class="eyebrow">INVITATION</p><h1>상견례 안내장 만들기</h1><p>양가 부모님께 보내는 한 장짜리 안내장이에요. 이미지로 저장해 메신저로 보내거나, 안내 문자로 복사해 쓰세요.</p></div>
+</div>
+<div class="layout">
+  <div class="panel">
+    <div class="field"><span class="lab">디자인</span><div class="swatches" id="invThemes"></div></div>
+    <div class="field"><label for="iTitle">제목</label><input class="inp" id="iTitle" value="두 가족의 첫 만남" maxlength="24"></div>
+    <div class="field"><label for="iMsg">한마디</label><textarea class="inp" id="iMsg" rows="3">저희 두 사람이 양가 부모님을 처음 한자리에 모십니다. 편한 마음으로 오셔서 따뜻한 식사 함께해 주세요.</textarea></div>
+    <div class="two">
+      <div class="field"><label for="iGroom">예비신랑</label><input class="inp" id="iGroom" value="철수" maxlength="12"></div>
+      <div class="field"><label for="iBride">예비신부</label><input class="inp" id="iBride" value="은혜" maxlength="12"></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="iDate">날짜</label><input class="inp" id="iDate" type="date"></div>
+      <div class="field"><label for="iTime">시간</label><input class="inp" id="iTime" type="time" value="12:00"></div>
+    </div>
+    <div class="field"><label for="iPlace">장소</label><input class="inp" id="iPlace" value="○○ 한정식 2층 연회룸" maxlength="30"></div>
+    <div class="field"><label for="iAddr">주소</label><input class="inp" id="iAddr" value="서울 ○○구 ○○로 00" maxlength="40"></div>
+    <div class="field"><label for="iPark">주차 · 오시는 길</label><input class="inp" id="iPark" value="건물 지하 주차장 2시간 무료" maxlength="40"></div>
+    <div class="field"><label for="iPlan">당일 순서</label><textarea class="inp" id="iPlan" rows="3">12:00 도착 및 인사
+12:30 식사
+14:00 마무리 인사</textarea><small>한 줄에 하나씩, 시간과 내용을 띄어 쓰세요</small></div>
+    <div class="actions">
+      <button type="button" class="btn btn-sm" id="invPng">이미지 저장</button>
+      <button type="button" class="btn btn-sm btn-line" id="invCopy">안내 문자 복사</button>
+      <button type="button" class="btn-ghost" id="invPrint">인쇄</button>
+    </div>
+  </div>
+  <div class="inv-paper sticky" id="invCanvas"></div>
+</div>

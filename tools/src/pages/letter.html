@@ -1,0 +1,47 @@
+<a class="back" href="{{R}}">← 상견례 준비 전체 보기</a>
+<div class="sec-hd">
+  <div><p class="eyebrow">HANDWRITTEN LETTER</p><h1>손편지 · 일러스트 양식</h1><p>받는 분과 시점을 고르면 편지 초안을 써 드려요. 문장을 고치면 편지지에 바로 반영되고, 이미지로 저장할 수 있어요.</p></div>
+</div>
+<div class="layout">
+  <div class="panel">
+    <div class="field"><span class="lab">편지지</span><div class="swatches" id="letterThemes"></div></div>
+    <div class="field"><span class="lab" id="lToLab">받는 분</span>
+      <div class="seg" role="group" aria-labelledby="lToLab"><button type="button" data-lto="in-law" aria-pressed="true">상대 부모님께</button><button type="button" data-lto="mine" aria-pressed="false">우리 부모님께</button></div>
+    </div>
+    <div class="field"><span class="lab" id="lWhenLab">시점</span>
+      <div class="seg" role="group" aria-labelledby="lWhenLab"><button type="button" data-lwhen="before" aria-pressed="true">상견례 전</button><button type="button" data-lwhen="after" aria-pressed="false">상견례 후</button></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="lFrom">보내는 사람</label><input class="inp" id="lFrom" value="은혜" maxlength="10"></div>
+      <div class="field"><label for="lPartner">예비 배우자</label><input class="inp" id="lPartner" value="철수" maxlength="10"></div>
+    </div>
+    <div class="field"><label for="lCall">받는 분 호칭</label><input class="inp" id="lCall" value="아버님, 어머님" maxlength="16"></div>
+    <div class="field"><label for="lBody">편지 내용</label><textarea class="inp" id="lBody" rows="10"></textarea></div>
+    <div class="actions">
+      <button type="button" class="btn btn-sm" id="letterPng">이미지 저장</button>
+      <button type="button" class="btn btn-sm btn-line" id="letterDraft">초안 다시 쓰기</button>
+      <button type="button" class="btn-ghost" id="letterPrint">인쇄</button>
+    </div>
+  </div>
+  <div class="letter-paper sticky"><canvas id="letterCanvas" width="900" height="1200" aria-label="손편지 미리보기"></canvas></div>
+</div>
+<div class="illus">
+  <h3>일러스트 내려받기</h3>
+  <p>사이트의 일러스트를 PNG로 받아 PPT, 안내장, 모바일 카드에 자유롭게 쓰세요.</p>
+  <div class="illus-grid" id="illusGrid">
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/seat.svg" alt="위에서 내려다본 여섯 자리 식탁" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/seat.svg" data-name="자리배치">자리배치 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/place.svg" alt="지도 위의 위치 표시" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/place.svg" data-name="장소찾기">장소찾기 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/gift.svg" alt="보자기로 싼 선물" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/gift.svg" data-name="선물">선물 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/ppt.svg" alt="가족 소개 화면이 띄워진 모니터" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/ppt.svg" data-name="PPT">PPT PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/invite.svg" alt="펼쳐진 안내장" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/invite.svg" data-name="안내장">안내장 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/letter.svg" alt="편지가 담긴 봉투와 펜" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/letter.svg" data-name="손편지">손편지 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/cost.svg" alt="영수증과 동전" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/cost.svg" data-name="비용">비용 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/talk.svg" alt="두 개의 말풍선과 찻잔" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/talk.svg" data-name="대화">대화 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/check.svg" alt="달력과 체크리스트" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/check.svg" data-name="체크리스트">체크리스트 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/flow.svg" alt="네 단계로 이어진 길" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/flow.svg" data-name="순서">순서 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/outfit.svg" alt="옷걸이에 걸린 재킷과 원피스" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/outfit.svg" data-name="복장">복장 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/manners.svg" alt="찻잔 두 개와 떡 접시" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/manners.svg" data-name="예절">예절 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/thanks.svg" alt="감사 메시지가 뜬 휴대폰" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/thanks.svg" data-name="감사인사">감사인사 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="{{R}}assets/art/whopays.svg" alt="둘로 나뉜 영수증과 양가 동전" width="400" height="500" loading="lazy"></div><button type="button" data-src="{{R}}assets/art/whopays.svg" data-name="비용나누기">비용나누기 PNG</button></div>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- [검색 등록] 소유확인 코드는 tools/build_site.py 의 NAVER_VERIFY, GOOGLE_VERIFY 에 넣고 다시 실행하세요.
+<meta name="naver-site-verification" content="네이버에서_받은_값">
+<meta name="google-site-verification" content="구글에서_받은_값">
+-->
+<title>상견례 손편지 예시와 편지지 | COSTCHECK</title>
+<meta name="description" content="상견례 전후 상대 부모님, 우리 부모님께 쓰는 손편지 예시를 골라 보세요. 예쁜 편지지에 담아 이미지로 저장할 수 있어요.">
+<link rel="canonical" href="https://costcheck.kr/letter/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="COSTCHECK">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="상견례 손편지 예시와 편지지 | COSTCHECK">
+<meta property="og:description" content="상견례 전후 상대 부모님, 우리 부모님께 쓰는 손편지 예시를 골라 보세요. 예쁜 편지지에 담아 이미지로 저장할 수 있어요.">
+<meta property="og:url" content="https://costcheck.kr/letter/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../assets/sgr.css">
+<!-- [광고] 애드센스 게시자 ID 는 tools/build_site.py 의 ADSENSE_CLIENT 에 넣으세요. -->
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="logo" href="../">COSTCHECK<span>상견례</span></a>
+    <nav class="gnb" aria-label="상견례 준비 메뉴">
+      <a href="../">둘러보기</a>
+      <a href="../seat/">자리 배치도</a>
+      <a href="../place/">장소 찾기</a>
+      <a href="../gift/">선물 추천</a>
+      <a href="../ppt/">PPT</a>
+      <a href="../invite/">안내장</a>
+      <a href="../letter/" aria-current="page">손편지</a>
+      <a href="../cost/">비용 계산</a>
+      <a href="../talk/">대화 카드</a>
+      <a href="../checklist/">체크리스트</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="view wrap">
+<a class="back" href="../">← 상견례 준비 전체 보기</a>
+<div class="sec-hd">
+  <div><p class="eyebrow">HANDWRITTEN LETTER</p><h1>손편지 · 일러스트 양식</h1><p>받는 분과 시점을 고르면 편지 초안을 써 드려요. 문장을 고치면 편지지에 바로 반영되고, 이미지로 저장할 수 있어요.</p></div>
+</div>
+<div class="layout">
+  <div class="panel">
+    <div class="field"><span class="lab">편지지</span><div class="swatches" id="letterThemes"></div></div>
+    <div class="field"><span class="lab" id="lToLab">받는 분</span>
+      <div class="seg" role="group" aria-labelledby="lToLab"><button type="button" data-lto="in-law" aria-pressed="true">상대 부모님께</button><button type="button" data-lto="mine" aria-pressed="false">우리 부모님께</button></div>
+    </div>
+    <div class="field"><span class="lab" id="lWhenLab">시점</span>
+      <div class="seg" role="group" aria-labelledby="lWhenLab"><button type="button" data-lwhen="before" aria-pressed="true">상견례 전</button><button type="button" data-lwhen="after" aria-pressed="false">상견례 후</button></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="lFrom">보내는 사람</label><input class="inp" id="lFrom" value="은혜" maxlength="10"></div>
+      <div class="field"><label for="lPartner">예비 배우자</label><input class="inp" id="lPartner" value="철수" maxlength="10"></div>
+    </div>
+    <div class="field"><label for="lCall">받는 분 호칭</label><input class="inp" id="lCall" value="아버님, 어머님" maxlength="16"></div>
+    <div class="field"><label for="lBody">편지 내용</label><textarea class="inp" id="lBody" rows="10"></textarea></div>
+    <div class="actions">
+      <button type="button" class="btn btn-sm" id="letterPng">이미지 저장</button>
+      <button type="button" class="btn btn-sm btn-line" id="letterDraft">초안 다시 쓰기</button>
+      <button type="button" class="btn-ghost" id="letterPrint">인쇄</button>
+    </div>
+  </div>
+  <div class="letter-paper sticky"><canvas id="letterCanvas" width="900" height="1200" aria-label="손편지 미리보기"></canvas></div>
+</div>
+<div class="illus">
+  <h3>일러스트 내려받기</h3>
+  <p>사이트의 일러스트를 PNG로 받아 PPT, 안내장, 모바일 카드에 자유롭게 쓰세요.</p>
+  <div class="illus-grid" id="illusGrid">
+    <div class="illus-item"><div class="art"><img src="../assets/art/seat.svg" alt="위에서 내려다본 여섯 자리 식탁" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/seat.svg" data-name="자리배치">자리배치 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/place.svg" alt="지도 위의 위치 표시" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/place.svg" data-name="장소찾기">장소찾기 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/gift.svg" alt="보자기로 싼 선물" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/gift.svg" data-name="선물">선물 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/ppt.svg" alt="가족 소개 화면이 띄워진 모니터" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/ppt.svg" data-name="PPT">PPT PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/invite.svg" alt="펼쳐진 안내장" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/invite.svg" data-name="안내장">안내장 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/letter.svg" alt="편지가 담긴 봉투와 펜" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/letter.svg" data-name="손편지">손편지 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/cost.svg" alt="영수증과 동전" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/cost.svg" data-name="비용">비용 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/talk.svg" alt="두 개의 말풍선과 찻잔" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/talk.svg" data-name="대화">대화 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/check.svg" alt="달력과 체크리스트" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/check.svg" data-name="체크리스트">체크리스트 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/flow.svg" alt="네 단계로 이어진 길" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/flow.svg" data-name="순서">순서 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/outfit.svg" alt="옷걸이에 걸린 재킷과 원피스" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/outfit.svg" data-name="복장">복장 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/manners.svg" alt="찻잔 두 개와 떡 접시" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/manners.svg" data-name="예절">예절 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/thanks.svg" alt="감사 메시지가 뜬 휴대폰" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/thanks.svg" data-name="감사인사">감사인사 PNG</button></div>
+    <div class="illus-item"><div class="art"><img src="../assets/art/whopays.svg" alt="둘로 나뉜 영수증과 양가 동전" width="400" height="500" loading="lazy"></div><button type="button" data-src="../assets/art/whopays.svg" data-name="비용나누기">비용나누기 PNG</button></div>
+  </div>
+</div>
+<aside class="related" aria-label="같이 보면 좋은 글"><h2>같이 보면 좋은 가이드</h2><ul><li><a href="../guide/thanks/">상견례 후 감사 인사 <span>그날 저녁 보내는 감사 문자 예시</span></a></li><li><a href="../guide/manners/">상견례 예절과 피해야 할 말 <span>호칭, 식사 예절, 피해야 할 말</span></a></li></ul></aside>
+</div>
+<div class="wrap more-tools">
+  <h3>다른 준비 도구</h3>
+  <div class="chips"><a class="chip" href="../seat/">자리 배치도</a><a class="chip" href="../place/">장소 찾기</a><a class="chip" href="../gift/">선물 추천</a><a class="chip" href="../ppt/">가족 소개 PPT</a><a class="chip" href="../invite/">안내장</a><a class="chip" href="../letter/" aria-current="page">손편지</a><a class="chip" href="../cost/">비용 계산기</a><a class="chip" href="../talk/">대화 카드</a><a class="chip" href="../checklist/">D-day 체크리스트</a></div>
+</div>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div class="ft-about"><b>COSTCHECK</b><p>상견례 준비 노트는 일반적인 관례를 정리한 안내예요. 지역과 집안에 따라 다를 수 있으니 양가의 뜻을 먼저 살펴 주세요. 도구에 입력한 내용과 사진은 서버로 보내지 않아요.</p></div>
+      <nav aria-label="준비 도구"><h2>준비 도구</h2><a href="../seat/">자리 배치도</a><a href="../place/">장소 찾기</a><a href="../gift/">선물 추천</a><a href="../ppt/">가족 소개 PPT</a><a href="../invite/">안내장</a><a href="../letter/">손편지</a><a href="../cost/">비용 계산기</a><a href="../talk/">대화 카드</a><a href="../checklist/">D-day 체크리스트</a></nav>
+      <nav aria-label="상견례 가이드"><h2>가이드</h2><a href="../guide/order/">상견례 순서와 진행</a><a href="../guide/outfit/">상견례 복장</a><a href="../guide/manners/">상견례 예절과 피해야 할 말</a><a href="../guide/thanks/">상견례 후 감사 인사</a><a href="../guide/who-pays/">상견례 비용은 누가 내나</a></nav>
+      <nav aria-label="사이트 정보"><h2>사이트</h2><a href="../">첫 화면</a><a href="../about/">사이트 소개</a><a href="../privacy/">개인정보처리방침</a><a href="../contact/">문의하기</a></nav>
+    </div>
+    <p class="ft-copy">© 2026 COSTCHECK · costcheck.kr</p>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="빠른 이동">
+  <a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>둘러보기</a>
+  <a href="../seat/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="4"/><circle cx="4" cy="8" r="1.5"/><circle cx="4" cy="16" r="1.5"/><circle cx="20" cy="8" r="1.5"/><circle cx="20" cy="16" r="1.5"/></svg>배치도</a>
+  <a href="../place/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>장소</a>
+  <a href="../gift/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9zm0 0c2-4 6-4 6-1.5S14 9 12 9z"/></svg>선물</a>
+  <a href="../checklist/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"/></svg>체크</a>
+</nav>
+
+<button class="to-top" id="toTop" aria-label="맨 위로"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1d1d22" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="printArea"></div>
+
+<script src="../assets/sgr.js"></script>
+<script src="../assets/letter.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "costcheck-ppt-templates",
+  "private": true,
+  "description": "상견례 가족 소개 PPT 템플릿 4종 생성기 (costcheck.kr/ppt/)",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0",
+    "sharp": "^0.33.5"
+  }
+}

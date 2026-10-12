@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="지도 위의 위치 표시">
+<rect width="400" height="500" fill="#e7eef6"/>
+<g fill="#dbe6f1"><rect x="20" y="40" width="110" height="90" rx="14"/><rect x="200" y="30" width="170" height="70" rx="14"/><rect x="30" y="180" width="90" height="120" rx="14"/><rect x="290" y="150" width="90" height="110" rx="14"/></g>
+<circle cx="90" cy="420" r="44" fill="#cfe3cf"/>
+<path d="M-10 410C110 380 260 450 410 400" stroke="#bcd3ec" stroke-width="30" fill="none"/>
+<path d="M-10 330C120 300 200 360 410 300" stroke="#fff" stroke-width="24" fill="none"/>
+<path d="M160-10C180 160 130 300 175 510" stroke="#fff" stroke-width="20" fill="none"/>
+<ellipse cx="250" cy="300" rx="34" ry="9" fill="#c5d4e6"/>
+<path d="M250 140c-34 0-58 26-58 56 0 40 58 100 58 100s58-60 58-100c0-30-24-56-58-56z" fill="#e2766c"/>
+<circle cx="250" cy="196" r="22" fill="#fff"/>
+<path d="M250 205c-8-5-11-9-11-13a5.5 5.5 0 0111-1 5.5 5.5 0 0111 1c0 4-3 8-11 13z" fill="#e2766c"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="보자기로 싼 선물">
+<rect width="400" height="500" fill="#ebe4f3"/><circle cx="70" cy="420" r="120" fill="#e1d6ee"/>
+<ellipse cx="200" cy="392" rx="112" ry="16" fill="#d9cce8"/>
+<rect x="104" y="208" width="192" height="180" rx="26" fill="#f0a8b5"/>
+<path d="M104 268c40 14 152 14 192 0M134 388l36-120M266 388l-36-120" stroke="#e48d9d" stroke-width="4" fill="none"/>
+<g fill="#f5bfc9"><path d="M200 210c-44-62-96-44-78 4z"/><path d="M200 210c44-62 96-44 78 4z"/></g>
+<path d="M200 210c-24-30-60-30-58-6M200 210c24-30 60-30 58-6" fill="none" stroke="#e48d9d" stroke-width="3"/>
+<circle cx="200" cy="212" r="17" fill="#e48d9d"/>
+<g fill="#fff"><path d="M88 150l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path d="M314 128l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><path d="M330 300l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+</svg>

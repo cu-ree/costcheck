@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="편지가 담긴 봉투와 펜">
+<rect width="400" height="500" fill="#f6e7ea"/><circle cx="350" cy="440" r="110" fill="#f0d9de"/>
+<rect x="70" y="210" width="260" height="180" rx="12" fill="#efc2ca"/>
+<rect x="96" y="120" width="208" height="200" rx="8" fill="#fff"/>
+<g fill="#f3e6e9"><rect x="120" y="150" width="120" height="8" rx="4"/><rect x="120" y="172" width="160" height="8" rx="4"/><rect x="120" y="194" width="140" height="8" rx="4"/><rect x="120" y="216" width="150" height="8" rx="4"/></g>
+<path d="M70 236l130 82 130-82v142a12 12 0 01-12 12H82a12 12 0 01-12-12z" fill="#f7d7dc"/>
+<circle cx="200" cy="318" r="20" fill="#d9626a"/>
+<path d="M200 326c-7-4.5-10-8-10-11.5a5 5 0 0110-1 5 5 0 0110 1c0 3.5-3 7-10 11.5z" fill="#fff"/>
+<g transform="rotate(32 320 150)"><rect x="312" y="66" width="16" height="140" rx="8" fill="#3e5480"/><path d="M312 206h16l-8 20z" fill="#c9a98f"/></g>
+</svg>

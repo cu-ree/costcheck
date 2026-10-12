@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="가족 소개 화면이 띄워진 모니터">
+<rect width="400" height="500" fill="#fbe9e1"/><circle cx="340" cy="90" r="110" fill="#f7dcd2"/>
+<rect x="58" y="120" width="284" height="186" rx="16" fill="#3a3a44"/><rect x="70" y="132" width="260" height="162" rx="8" fill="#fff"/>
+<path d="M182 306h36l10 44h-56z" fill="#d8cfcb"/><rect x="146" y="348" width="108" height="10" rx="5" fill="#d8cfcb"/>
+<circle cx="160" cy="196" r="24" fill="#b9cbe6"/><circle cx="240" cy="196" r="24" fill="#f3c3b9"/>
+<path d="M200 206c-8-5-11-9-11-13a5.5 5.5 0 0111-1 5.5 5.5 0 0111 1c0 4-3 8-11 13z" fill="#e2766c"/>
+<rect x="130" y="238" width="140" height="9" rx="4.5" fill="#efe9e6"/><rect x="152" y="256" width="96" height="9" rx="4.5" fill="#efe9e6"/>
+<g fill="#fff"><rect x="58" y="392" width="84" height="52" rx="8"/><rect x="158" y="392" width="84" height="52" rx="8"/><rect x="258" y="392" width="84" height="52" rx="8"/></g>
+<g fill="#f3c3b9"><rect x="70" y="404" width="30" height="6" rx="3"/><rect x="170" y="404" width="40" height="6" rx="3"/><rect x="270" y="404" width="24" height="6" rx="3"/></g>
+</svg>
