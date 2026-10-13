@@ -29,7 +29,7 @@ OUT = ROOT
 DOMAIN = "https://costcheck.kr"
 BRAND = "COSTCHECK"
 # 검색 등록 소유확인 값(content="..." 안의 값만). 넣고 다시 실행하면 모든 페이지 <head>에 들어간다. 비우면 주석으로 자리만 남긴다.
-NAVER_VERIFY = ""
+NAVER_VERIFY = "8ed7b34aeffb8e94ed02fe422e536bfe5befe68d"
 GOOGLE_VERIFY = ""
 # 애드센스 게시자 ID (예: "ca-pub-0000000000000000"). 비우면 광고 스크립트를 넣지 않는다.
 ADSENSE_CLIENT = ""
